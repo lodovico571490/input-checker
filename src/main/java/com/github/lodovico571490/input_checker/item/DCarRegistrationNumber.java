@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * 自動車登録番号ドメイン
+ * Automotive registration number domain
  *
  */
 public class DCarRegistrationNumber extends ADomain {
