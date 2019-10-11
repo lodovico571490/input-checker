@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'input-checker'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = ''
+
+dependencies {
+    // compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+
+    // https://mvnrepository.com/artifact/joda-time/joda-time
+    compile group: 'joda-time', name: 'joda-time', version: '2.10.4'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
+
+}

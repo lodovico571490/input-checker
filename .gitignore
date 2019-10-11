@@ -1,1 +1,11 @@
 /build/
+.gradle/
+.vscode/
+bin/
+.idea/
+.settings/
+
+.project
+input-checker-3.iml
+.classpath
+.project

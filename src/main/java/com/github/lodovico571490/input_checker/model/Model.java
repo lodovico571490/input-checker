@@ -11,13 +11,16 @@ import com.github.lodovico571490.input_checker.item.DCarRegistrationNumber;
 import com.github.lodovico571490.input_checker.item.DDate;
 import com.github.lodovico571490.input_checker.item.DName;
 import com.github.lodovico571490.input_checker.item.IDomain;
+import com.github.lodovico571490.input_checker.item.Item;
 
 public class Model {
 
 	/** regist date */
+	@Item
 	DDate date = new DDate("regist date", "date", "", 8, func().checkDate);
 	/** user name */
-	DName name = new DName("regist date", "date", "", 25, func().checkDate);;
+	@Item
+	DName name = new DName("regist date", "date", "", 25, func().checkDate);
 
 	/** car registration number */
 	DCarRegistrationNumber carRegistrationNumber = new DCarRegistrationNumber("regist date", "date", "", 7,
@@ -50,7 +53,7 @@ public class Model {
 			@Override
 			public void accept(IDomain d) {
 				if (d.getLength() >= d.getValue().length()) {
-					errors.add("input error of " + d.getNameL() +"(" + d.getNameP() + ")");
+					errors.add("input error of " + d.getNameL() + "(" + d.getNameP() + ")");
 				}
 			}
 		});
